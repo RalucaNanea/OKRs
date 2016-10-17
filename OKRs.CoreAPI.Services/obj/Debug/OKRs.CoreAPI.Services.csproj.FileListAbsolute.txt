@@ -1,0 +1,4 @@
+C:\PersonalProject\OKRs.DataContract\OKRs.CoreAPI.Services\bin\Debug\OKRs.CoreAPI.Services.dll
+C:\PersonalProject\OKRs.DataContract\OKRs.CoreAPI.Services\bin\Debug\OKRs.CoreAPI.Services.pdb
+C:\PersonalProject\OKRs.DataContract\OKRs.CoreAPI.Services\obj\Debug\OKRs.CoreAPI.Services.dll
+C:\PersonalProject\OKRs.DataContract\OKRs.CoreAPI.Services\obj\Debug\OKRs.CoreAPI.Services.pdb

@@ -1,0 +1,11 @@
+C:\PersonalProject\OKRs.DataContract\OKRs.DataContract\bin\Debug\OKRs.DataContract.dll
+C:\PersonalProject\OKRs.DataContract\OKRs.DataContract\bin\Debug\OKRs.DataContract.pdb
+C:\PersonalProject\OKRs.DataContract\OKRs.DataContract\obj\Debug\OKRs.DataContract.dll
+C:\PersonalProject\OKRs.DataContract\OKRs.DataContract\obj\Debug\OKRs.DataContract.pdb
+C:\PersonalProject\OKRs\OKRs.DataContract\obj\Debug\OKRs.DataContract.csprojResolveAssemblyReference.cache
+C:\PersonalProject\OKRs\OKRs.DataContract\obj\Debug\OKRs.DataContract.dll
+C:\PersonalProject\OKRs\OKRs.DataContract\obj\Debug\OKRs.DataContract.pdb
+C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\OKRs.DataContract.dll
+C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\OKRs.DataContract.pdb
+C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\Dapper.dll
+C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\Dapper.xml
