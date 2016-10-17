@@ -9,3 +9,10 @@ C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\OKRs.DataContract.dll
 C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\OKRs.DataContract.pdb
 C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\Dapper.dll
 C:\PersonalProject\OKRs\OKRs.DataContract\bin\Debug\Dapper.xml
+C:\VeGit\Personal objectives\OKRs.DataContract\bin\Debug\OKRs.DataContract.dll
+C:\VeGit\Personal objectives\OKRs.DataContract\bin\Debug\OKRs.DataContract.pdb
+C:\VeGit\Personal objectives\OKRs.DataContract\bin\Debug\Dapper.dll
+C:\VeGit\Personal objectives\OKRs.DataContract\bin\Debug\Dapper.xml
+C:\VeGit\Personal objectives\OKRs.DataContract\obj\Debug\OKRs.DataContract.csprojResolveAssemblyReference.cache
+C:\VeGit\Personal objectives\OKRs.DataContract\obj\Debug\OKRs.DataContract.dll
+C:\VeGit\Personal objectives\OKRs.DataContract\obj\Debug\OKRs.DataContract.pdb
