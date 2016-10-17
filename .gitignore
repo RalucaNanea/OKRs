@@ -15,6 +15,12 @@
 *.userprefs
 
 # Build results
+OKRs.API.Services/bin
+OKRs.API.Services/obj
+OKRs.CoreAPI.Services/bin
+OKRs.CoreAPI.Services/obj
+OKRs.DataContract/bin
+OKRs.DataContract/obj
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
