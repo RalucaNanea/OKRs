@@ -11,7 +11,7 @@ namespace OKRs.API.Tests.Steps
     public class InsertTeamSteps: StepBase
     {
         private TeamDto _teamDtoRequest;
-        private int _teamDtoResponse;
+        private TeamDto _teamDtoResponse;
 
         [Given(@"I have a valid TeamDto")]
         public void GivenIHaveAValidTeamDto()
@@ -33,7 +33,8 @@ namespace OKRs.API.Tests.Steps
         public void ThenSuccessCodeIsReturnedAsAResponse(int p0)
         {
             var test = _teamDtoResponse;
-            //teamDtoResponse.ShouldBe(true);
+            //Q: Why is the TeamId = 0 in the response? 
+           // _teamDtoResponse.TeamId.ShouldBeGreaterThan(0);
         }
 
     }

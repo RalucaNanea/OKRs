@@ -14,14 +14,14 @@ namespace OKRs.ApiClient.Common.CoreApiClient
             _client = new RestClient(apiBaseUrl);
         }
 
-        public int InsertTeam(TeamDto teamDtoRequest)
+        public TeamDto InsertTeam(TeamDto teamDtoRequest)
         {
             var request = _client.CreateRequest($"team/");
             request.AddJsonBody(teamDtoRequest);
 
             return _client
-               .ExecuteAsPost<int>(request, "POST")
-               .AsClientResponseExpecting(HttpStatusCode.OK);
+               .ExecuteAsPost<TeamDto>(request, "POST")
+               .AsClientResponseExpecting(HttpStatusCode.Created);
         }
     }
 }
