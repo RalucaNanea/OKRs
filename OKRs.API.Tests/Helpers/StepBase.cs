@@ -6,7 +6,7 @@ using System.IO;
 
 namespace OKRs.API.Tests.Helpers
 {
-    public class StepBase
+    public abstract class StepBase
     {
         protected static OKRsApiClient _apiClient;
         protected static string ResponseErrorMessage;

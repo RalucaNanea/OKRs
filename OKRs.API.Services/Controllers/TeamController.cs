@@ -30,9 +30,9 @@ namespace OKRs.API.Services.Controllers
         public HttpResponseMessage InsertTeam([FromBody]TeamDto team)
         {
             if (team == null)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "team is null");
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Team is null");
 
-            _teamService.InsertTeam(team);
+            team = _teamService.InsertTeam(team);
             return Request.CreateResponse(HttpStatusCode.Created, team);
         }
 
@@ -40,8 +40,8 @@ namespace OKRs.API.Services.Controllers
         [HttpPost, Route("team/Update", Name = "UpdateTeam")]
         public HttpResponseMessage UpdateTeam([FromBody]TeamDto team)
         {
-            if (team  == null)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "team is null");
+            if (team == null)
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Team is null");
 
             _teamService.UpdateTeam(team);
             return Request.CreateResponse(HttpStatusCode.Created, team);

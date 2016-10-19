@@ -82,7 +82,28 @@ this.FeatureBackground();
 #line 10
  testRunner.When("I call the insert Team API endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("201 success code is returned as a response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be the TeamDto submitted with the property TeamId greater than " +
+                    "zero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Add team with empty region", SourceLine=12)]
+        public virtual void AddTeamWithEmptyRegion()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add team with empty region", ((string[])(null)));
+#line 13
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 14
+ testRunner.When("I update TeamDto with empty team region", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.And("I call the insert Team API endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+ testRunner.Then("the API returns \'BadRequest\' status code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
+ testRunner.And("\'Team region is null\' error message is returned as a response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

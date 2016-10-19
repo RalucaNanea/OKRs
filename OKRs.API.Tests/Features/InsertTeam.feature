@@ -8,5 +8,10 @@ Background:
 
 Scenario: Add valid team	
 	When I call the insert Team API endpoint
-	Then 201 success code is returned as a response
-	#And the response body should contain the TeamDto properties
+	Then the result should be the TeamDto submitted with the property TeamId greater than zero
+
+Scenario: Add team with empty region
+	When I update TeamDto with empty team region
+	And I call the insert Team API endpoint
+	Then the API returns 'BadRequest' status code
+	And 'Team region is null' error message is returned as a response

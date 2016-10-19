@@ -1,5 +1,6 @@
 ﻿using OKRs.API.Services.Interfaces;
 using OKRs.DataContract;
+using System;
 using System.Data;
 using System.Linq;
 using static OKRs.API.Services.Infrastructure.TransactionFactoryDelegates;
@@ -13,16 +14,21 @@ namespace OKRs.API.Services.Services
         {
             _dataAccessLayer = dataAccessLayer;
         }
-        public int InsertTeam(TeamDto team)
+        public TeamDto InsertTeam(TeamDto team)
         {
+            if (team.Region == null)
+            {
+                throw new ArgumentException($"Team region is null");
+            }
+
             var dataAccess = _dataAccessLayer();
             string sqlQuery =
             @"INSERT INTO Team (TeamName, Region, ProductManager, TechLead)
-            VALUES (@teamName, @region, @productManager, @techLead)
+            VALUES (@teamName, @region, @productManager, @techLead);
             SELECT SCOPE_IDENTITY();";
 
-            var teamId = dataAccess.ExecuteScalar<int>(sqlQuery, new { teamName = team.TeamName, region = team.Region, productManager=team.ProductManager, techLead = team.TechLead }, CommandType.Text);
-            return teamId;
+            team.TeamId = dataAccess.ExecuteScalar<int>(sqlQuery, new { teamName = team.TeamName, region = team.Region, productManager=team.ProductManager, techLead = team.TechLead }, CommandType.Text);
+            return team;
         }
 
         public TeamDto GetTeamById(int teamId)

@@ -8,7 +8,7 @@ using TechTalk.SpecFlow;
 namespace OKRs.API.Tests.Steps
 {
     [Binding]
-    public class InsertTeamSteps: StepBase
+    public class InsertTeamSteps : StepBase
     {
         private TeamDto _teamDtoRequest;
         private TeamDto _teamDtoResponse;
@@ -29,12 +29,29 @@ namespace OKRs.API.Tests.Steps
             });
         }
 
-        [Then(@"(.*) success code is returned as a response")]
-        public void ThenSuccessCodeIsReturnedAsAResponse(int p0)
+        [Then(@"the result should be the TeamDto submitted with the property TeamId greater than zero")]
+        public void ThenTheResultShouldBeTheTeamDtoSubmittedWithThePropertyTeamIdGreaterThanZero()
         {
-            var test = _teamDtoResponse;
-            //Q: Why is the TeamId = 0 in the response? 
-           // _teamDtoResponse.TeamId.ShouldBeGreaterThan(0);
+             _teamDtoResponse.TeamId.ShouldBeGreaterThan(0);
+        }
+
+        [When(@"I update TeamDto with empty team region")]
+        public void WhenIUpdateTeamDtoWithEmptyTeamRegion()
+        {
+            _teamDtoRequest.Region = null;
+        }
+
+
+        [Then(@"the API returns '(.*)' status code")]
+        public void ThenTheAPIReturnsStatusCode(string expectedStatusCode)
+        {
+            ResponseStatusCode.ShouldBe(expectedStatusCode);
+        }
+
+        [Then(@"'(.*)' error message is returned as a response")]
+        public void ThenErrorMessageIsReturnedAsAResponse(string expectedErrorMessage)
+        {
+            ResponseErrorMessage.ShouldContain(expectedErrorMessage);
         }
 
     }
